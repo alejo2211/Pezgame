@@ -89,6 +89,6 @@ public class Pez : MonoBehaviour
     public void Sumar()
     {
         GameManager manager = GameObject.Find("Manager").GetComponent<GameManager>();
-        manager.Puntaje();
+        manager.SumarPuntaje();
     }
 }

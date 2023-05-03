@@ -6,14 +6,17 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    //public GameObject manager;
+    public static GameManager manager;
     public TextMeshProUGUI puntuacionText;
 
-    int puntuacion;
+     public int puntuacion;
 
-    public void Puntaje()
+   
+    public void SumarPuntaje()
     {
         puntuacion++;
         puntuacionText.text = "PUNTAJE: " + puntuacion.ToString();
+        Debug.Log("Peces agarrados" + puntuacionText);
+
     }
 }
