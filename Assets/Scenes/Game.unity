@@ -1661,7 +1661,6 @@ GameObject:
   - component: {fileID: 890778293}
   - component: {fileID: 890778292}
   - component: {fileID: 890778299}
-  - component: {fileID: 890778298}
   - component: {fileID: 890778297}
   - component: {fileID: 890778296}
   - component: {fileID: 890778295}
@@ -1711,7 +1710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890778291}
   m_LocalRotation: {x: -0.013293367, y: 0.8270846, z: -0.028586559, w: 0.56119275}
-  m_LocalPosition: {x: -0.751, y: 0.677, z: -0.199}
+  m_LocalPosition: {x: -1.414, y: 0.038, z: 0.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1791,24 +1790,6 @@ MonoBehaviour:
   m_LocomotionProvider: {fileID: 0}
   m_MinHeight: 0
   m_MaxHeight: Infinity
---- !u!143 &890778298
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890778291}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &890778299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2119,6 +2100,10 @@ MonoBehaviour:
       type: 3}
   pez: {fileID: 165142905}
   control: {fileID: 372185152}
+  particulas: {fileID: 3432958286849152088, guid: 87ee7299dd44ed747af24dbb91bcd33b,
+    type: 3}
+  particulasBien: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
+    type: 3}
 --- !u!65 &1289669455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3025,20 +3010,6 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
---- !u!114 &1724824803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724824797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5058a9eaa31c5334eba2b9ffe629c52e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  control: {fileID: 0}
-  puntuacionText: {fileID: 962911943}
 --- !u!1001 &1773185480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4304,7 +4275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &19156297009958545
 MeshFilter:
@@ -4699,7 +4670,7 @@ PrefabInstance:
     - target: {fileID: 837797941854444233, guid: 708c27b58ca0d4d469d923c76f0f1f39,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 837797941854444233, guid: 708c27b58ca0d4d469d923c76f0f1f39,
         type: 3}

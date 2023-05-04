@@ -9,7 +9,9 @@ public class AgarrePinzas : MonoBehaviour
     public InputActionProperty trigger;
     public GameObject pez;
     public GameManager control;
-
+    public GameObject particulas;
+    public GameObject particulasBien;
+    
     private void Start()
     {
     }
@@ -30,6 +32,7 @@ public class AgarrePinzas : MonoBehaviour
         {
             pez.SetActive(false);
             Agarrado = false;
+            Instantiate(particulas, pez.transform.position, Quaternion.identity);
         }
     }
 
@@ -40,6 +43,7 @@ public class AgarrePinzas : MonoBehaviour
             Agarrado = false;
             pez.SetActive(false);
             control.SumarPuntaje();
+            Instantiate(particulasBien, pez.transform.position, Quaternion.identity);
 
         }
     }
