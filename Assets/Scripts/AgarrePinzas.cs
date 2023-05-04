@@ -1,48 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class AgarrePinzas : MonoBehaviour
 {
     public Transform Punta;
     public bool Agarrado = false;
-    private Rigidbody rb;
-    private Collider ObjetoCollider;
+    public InputActionProperty trigger;
+    public GameObject pez;
+    public GameManager control;
 
     private void Start()
     {
-        rb = Punta.GetComponent<Rigidbody>();
-        ObjetoCollider = Punta.GetComponent<Collider>();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        if (!Agarrado&&other.gameObject.CompareTag("Pez"))
+        float triggerValue = trigger.action.ReadValue<float>();
+        if (triggerValue>0.9f && other.gameObject.CompareTag("Pez") && !Agarrado)
         {
-            Punta.position = other.transform.position;
-            other.transform.parent = Punta;
-            other.transform.localPosition = Vector3.zero;
-            other.transform.localRotation = Quaternion.identity;
+            pez.SetActive(true);
+            Destroy(other.gameObject);
             Agarrado = true;
         }
     }
     void Update()
     {
-        if (Agarrado)
+        if (Agarrado && trigger.action.ReadValue<float>()<0.2)
         {
-            Punta.position = transform.position;
+            pez.SetActive(false);
+            Agarrado = false;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (Agarrado && other.gameObject.CompareTag("Canasta"))
         {
             Agarrado = false;
-            Transform pez = Punta.GetChild(0);
-            pez.parent = null;
-            pez.gameObject.AddComponent<Rigidbody>();
-            Punta.position = transform.position;
+            pez.SetActive(false);
+            control.SumarPuntaje();
+
         }
     }
 }

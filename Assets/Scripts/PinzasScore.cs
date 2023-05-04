@@ -15,7 +15,7 @@ public class PinzasScore : MonoBehaviour
 
             control.SumarPuntaje();
 
-            Destroy(other.gameObject);
+            
 
             Debug.Log("Puntuacion" + control.puntuacion);
         }
