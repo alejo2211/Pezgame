@@ -3,7 +3,22 @@ guid: 001f8181b13d6ef4c98534201bd1ecdf
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: emisivo
+    second: {fileID: 2100000, guid: 7d628f31a7412414a82b7c6744d7c1cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: laboratorio
+    second: {fileID: 2100000, guid: df34a6c51b3fadc42a7e1777bb89ff03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: logoos
+    second: {fileID: 2100000, guid: 6220f89f856571b41bd3522b24fccf09, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
